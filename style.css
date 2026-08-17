@@ -1,0 +1,804 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    margin: 0;
+
+    padding: 35px 25px;
+
+    min-height: 100vh;
+
+    font-family: "DM Sans", sans-serif;
+
+    color: #ffffff;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(120, 90, 255, 0.18),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(255, 80, 150, 0.15),
+            transparent 30%
+        ),
+
+        #0c0c12;
+
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+
+    text-align: center;
+
+    margin-bottom: 45px;
+
+}
+
+
+.badge {
+
+    display: inline-block;
+
+    padding: 7px 14px;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.06);
+
+    color: #bdb8ff;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 15px;
+
+}
+
+
+h1 {
+
+    margin: 0;
+
+    font-family: "Outfit", sans-serif;
+
+    font-size: clamp(36px, 5vw, 62px);
+
+    font-weight: 800;
+
+    letter-spacing: -2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #c8c4ff
+        );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+}
+
+
+.subtitle {
+
+    margin-top: 12px;
+
+    color: #9c9ca8;
+
+    font-size: 16px;
+
+}
+
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
+
+.main-layout {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    max-width: 1450px;
+
+    margin: auto;
+
+}
+
+
+/* =========================================
+   MAIN APP
+========================================= */
+
+.app-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    width: 850px;
+
+}
+
+
+/* =========================================
+   GLASS CARDS
+========================================= */
+
+.camera-section,
+.result-section {
+
+    width: 412px;
+
+    padding: 20px;
+
+    border-radius: 24px;
+
+    background:
+        rgba(255,255,255,0.065);
+
+    border:
+        1px solid rgba(255,255,255,0.10);
+
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,0.35);
+
+}
+
+
+/* =========================================
+   SECTION LABEL
+========================================= */
+
+.section-label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 14px;
+
+    color: #8f8d9e;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.live-dot {
+
+    width: 7px;
+
+    height: 7px;
+
+    background: #ff4d6d;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 10px #ff4d6d;
+
+}
+
+
+/* =========================================
+   CAMERA
+========================================= */
+
+.video-wrapper {
+
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: #050507;
+
+}
+
+
+video {
+
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    transform: scaleX(-1);
+
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+button {
+
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 14px 20px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background: #ffffff;
+
+    color: #111118;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+button span {
+
+    margin-right: 7px;
+
+}
+
+
+button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px rgba(255,255,255,0.15);
+
+}
+
+
+button:active {
+
+    transform: translateY(0);
+
+}
+
+
+/* =========================================
+   RESULT
+========================================= */
+
+.result-section {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.result-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    flex: 1;
+
+}
+
+
+#action {
+
+    margin: 10px 0 4px;
+
+    font-family: "Outfit", sans-serif;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    color: #ffffff;
+
+}
+
+
+.result-hint {
+
+    margin: 0 0 15px;
+
+    color: #777784;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================
+   RESULT IMAGE
+========================================= */
+
+.result-image-wrapper {
+
+    width: 100%;
+
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 300px;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    background:
+        rgba(0,0,0,0.20);
+
+}
+
+
+#resultImage {
+
+    display: block;
+
+    width: 100%;
+
+    max-height: 380px;
+
+    object-fit: contain;
+
+    border-radius: 15px;
+
+}
+
+
+/* =========================================
+   SIDE REFERENCES
+========================================= */
+
+.side-references {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    width: 145px;
+
+}
+
+
+.reference-card {
+
+    padding: 7px;
+
+    border-radius: 18px;
+
+    background:
+        rgba(255,255,255,0.07);
+
+    border:
+        1px solid rgba(255,255,255,0.10);
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,0.25);
+
+    transition:
+        transform 0.25s ease;
+
+}
+
+
+.reference-card:hover {
+
+    transform:
+        translateY(-5px)
+        scale(1.02);
+
+}
+
+
+.reference-card img {
+
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: contain;
+
+    border-radius: 13px;
+
+}
+
+
+/* =========================================
+   MOBILE REFERENCES
+========================================= */
+
+.reference-row {
+
+    display: none;
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    text-align: center;
+
+    margin-top: 40px;
+
+    color: #666672;
+
+    font-size: 12px;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1250px) {
+
+    body {
+
+        padding: 25px 15px;
+
+    }
+
+
+    .main-layout {
+
+        gap: 15px;
+
+    }
+
+
+    .side-references {
+
+        width: 105px;
+
+        gap: 14px;
+
+    }
+
+
+    .app-container {
+
+        width: 760px;
+
+    }
+
+
+    .camera-section,
+    .result-section {
+
+        width: 370px;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    body {
+
+        padding: 15px 12px;
+
+    }
+
+
+    header {
+
+        margin-bottom: 25px;
+
+    }
+
+
+    h1 {
+
+        font-size: 36px;
+
+        letter-spacing: -1px;
+
+    }
+
+
+    .subtitle {
+
+        font-size: 14px;
+
+        padding: 0 15px;
+
+        line-height: 1.5;
+
+    }
+
+
+    /* Hide desktop reference images */
+
+    .side-references {
+
+        display: none;
+
+    }
+
+
+    /* =====================================
+       MOBILE REFERENCE ROWS
+    ====================================== */
+
+    .reference-row {
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 9px;
+
+        width: 100%;
+
+        margin: 10px auto;
+
+    }
+
+
+    .mobile-reference {
+
+        flex: 1;
+
+        max-width: 115px;
+
+        padding: 4px;
+
+        border-radius: 13px;
+
+        background:
+            rgba(255,255,255,0.06);
+
+        border:
+            1px solid rgba(255,255,255,0.10);
+
+        box-shadow:
+            0 8px 20px rgba(0,0,0,0.25);
+
+    }
+
+
+    .mobile-reference img {
+
+        display: block;
+
+        width: 100%;
+
+        aspect-ratio: 1 / 1;
+
+        object-fit: contain;
+
+        border-radius: 10px;
+
+    }
+
+
+    .top-references {
+
+        margin-bottom: 22px;
+
+    }
+
+
+    /* =====================================
+       MAIN APP
+    ====================================== */
+
+    .main-layout {
+
+        display: block;
+
+        width: 100%;
+
+    }
+
+
+    .app-container {
+
+        display: flex;
+
+        flex-direction: column;
+
+        width: 100%;
+
+        gap: 18px;
+
+    }
+
+
+    .camera-section,
+    .result-section {
+
+        width: 100%;
+
+        padding: 15px;
+
+        border-radius: 20px;
+
+    }
+
+
+    video {
+
+        aspect-ratio: 4 / 3;
+
+        max-height: 70vh;
+
+    }
+
+
+    #action {
+
+        font-size: 27px;
+
+        margin-top: 8px;
+
+    }
+
+
+    .result-image-wrapper {
+
+        min-height: 250px;
+
+        max-height: 65vh;
+
+    }
+
+
+    #resultImage {
+
+        max-height: 60vh;
+
+    }
+
+
+    .bottom-references {
+
+        margin-top: 20px;
+
+        margin-bottom: 20px;
+
+    }
+
+
+    footer {
+
+        margin-top: 25px;
+
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 400px) {
+
+    body {
+
+        padding: 12px 8px;
+
+    }
+
+
+    h1 {
+
+        font-size: 31px;
+
+    }
+
+
+    .reference-row {
+
+        gap: 6px;
+
+    }
+
+
+    .mobile-reference {
+
+        max-width: 105px;
+
+    }
+
+
+    .camera-section,
+    .result-section {
+
+        padding: 12px;
+
+    }
+
+
+    #action {
+
+        font-size: 24px;
+
+    }
+
+}

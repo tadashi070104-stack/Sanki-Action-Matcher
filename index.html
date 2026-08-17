@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sanki Action Matcher</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         MOBILE TOP REFERENCES
+    ========================================== -->
+
+    <div class="reference-row top-references">
+
+        <div class="mobile-reference">
+            <img src="images/eye.png" alt="Eye">
+        </div>
+
+        <div class="mobile-reference">
+            <img src="images/hand.png" alt="Hand">
+        </div>
+
+        <div class="mobile-reference">
+            <img src="images/smile.png" alt="Smile">
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header>
+
+        <div class="badge">
+            ✦ REAL-TIME FACE ACTION
+        </div>
+
+        <h1>
+            Sanki Action Matcher
+        </h1>
+
+        <p class="subtitle">
+            Make the expression. Let the camera find the match.
+        </p>
+
+    </header>
+
+
+
+    <!-- =========================================
+         MAIN LAYOUT
+    ========================================== -->
+
+    <div class="main-layout">
+
+
+        <!-- =====================================
+             LEFT REFERENCE IMAGES
+        ====================================== -->
+
+        <div class="side-references left-references">
+
+            <div class="reference-card">
+                <img
+                    src="images/eye.png"
+                    alt="Eye">
+            </div>
+
+            <div class="reference-card">
+                <img
+                    src="images/hand.png"
+                    alt="Hand">
+            </div>
+
+            <div class="reference-card">
+                <img
+                    src="images/smile.png"
+                    alt="Smile">
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================================
+             MAIN APP
+        ====================================== -->
+
+        <main class="app-container">
+
+
+            <!-- =================================
+                 CAMERA
+            ================================== -->
+
+            <section class="camera-section">
+
+                <div class="section-label">
+
+                    <span class="live-dot"></span>
+
+                    YOUR CAMERA
+
+                </div>
+
+
+                <div class="video-wrapper">
+
+                    <video
+                        id="video"
+                        autoplay
+                        playsinline>
+                    </video>
+
+                </div>
+
+
+                <button id="startButton">
+
+                    <span>▶</span>
+
+                    Start Camera
+
+                </button>
+
+            </section>
+
+
+
+            <!-- =================================
+                 RESULT
+            ================================== -->
+
+            <section class="result-section">
+
+                <div class="section-label">
+
+                    MATCHED ACTION
+
+                </div>
+
+
+                <div class="result-content">
+
+
+                    <h2 id="action">
+                        Waiting...
+                    </h2>
+
+
+                    <p class="result-hint">
+                        Your matching expression will appear here
+                    </p>
+
+
+                    <!-- Hidden because confidence is not displayed -->
+
+                    <p
+                        id="confidence"
+                        style="display: none;">
+                        Confidence: --
+                    </p>
+
+
+                    <div class="result-image-wrapper">
+
+                        <img
+                            id="resultImage"
+                            src=""
+                            alt="Matching action">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+
+        <!-- =====================================
+             RIGHT REFERENCE IMAGES
+        ====================================== -->
+
+        <div class="side-references right-references">
+
+            <div class="reference-card">
+
+                <img
+                    src="images/tongue.png"
+                    alt="Tongue">
+
+            </div>
+
+
+            <div class="reference-card">
+
+                <img
+                    src="images/sad.png"
+                    alt="Angry">
+
+            </div>
+
+
+            <div class="reference-card">
+
+                <img
+                    src="images/smile.png"
+                    alt="Smile">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         MOBILE BOTTOM REFERENCES
+    ========================================== -->
+
+    <div class="reference-row bottom-references">
+
+        <div class="mobile-reference">
+            <img
+                src="images/tongue.png"
+                alt="Tongue">
+        </div>
+
+        <div class="mobile-reference">
+            <img
+                src="images/sad.png"
+                alt="Angry">
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        Made for fun ✦ Try every expression
+
+    </footer>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script
+        type="module"
+        src="script.js">
+    </script>
+
+</body>
+
+</html>
